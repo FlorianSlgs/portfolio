@@ -1,0 +1,18 @@
+<button 
+  [type]="type()"
+  [class]="buttonClasses()"
+  (click)="onClick($event)">
+  
+  <!-- Icône à gauche (optionnelle) -->
+  @if (iconLeft()) {
+    <i [class]="iconLeft() + ' mr-2'"></i>
+  }
+  
+  <!-- Contenu du bouton -->
+  <ng-content></ng-content>
+  
+  <!-- Icône à droite (optionnelle) -->
+  @if (iconRight()) {
+    <i [class]="iconRight() + ' ml-2'"></i>
+  }
+</button>
