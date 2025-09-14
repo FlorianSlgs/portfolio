@@ -21,3 +21,32 @@
   background-color: rgba(0, 0, 0, 0.528);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
+
+/* Vos styles existants du header + ajout de l'effet de soulignement */
+
+app-button-anchor {
+  position: relative;
+  display: inline-block;
+}
+
+app-button-anchor::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+app-button-anchor:hover::after,
+app-button-anchor.active::after {
+  width: 100%;
+}
+
+app-button-anchor.active {
+  /* Optionnel: ajouter d'autres styles pour l'état actif */
+  font-weight: 600;
+}

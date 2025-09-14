@@ -1,0 +1,128 @@
+import { Component, Input, Output, EventEmitter, HostListener, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Project } from '../../DOM/section2/section2';
+
+@Component({
+  selector: 'app-project-modal',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <div class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-300" 
+         (click)="onBackdropClick($event)">
+      <div class="relative bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl animate-in zoom-in-95 slide-in-from-bottom-4 duration-400" 
+           #modalContent>
+        
+        <!-- Close Button -->
+        <button class="absolute top-5 right-5 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110 z-10" 
+                (click)="close()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+          <!-- Image Section -->
+          <div class="relative overflow-hidden rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none">
+            <img [src]="project.image" [alt]="project.title" 
+                 class="w-full h-full object-cover">
+          </div>
+
+          <!-- Info Section -->
+          <div class="p-8 lg:p-10 flex flex-col space-y-6">
+            <!-- Header -->
+            <div class="border-b border-white/10 pb-5">
+              <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-xl text-sm font-medium border border-blue-500/30 mb-3">
+                {{ project.category }}
+              </span>
+              <h2 class="text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r from-white to-slate-300 bg-clip-text mb-2">
+                {{ project.title }}
+              </h2>
+              <p class="text-slate-400 text-lg italic">{{ project.subtitle }}</p>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <p class="text-slate-300 leading-relaxed">{{ project.description }}</p>
+            </div>
+
+            <!-- Technologies -->
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-3">Technologies utilisées</h3>
+              <div class="flex flex-wrap gap-2">
+                @for (tech of project.technologies; track tech) {
+                  <span class="px-3 py-1.5 bg-purple-500/20 text-purple-300 rounded-xl text-sm font-medium border border-purple-500/30">
+                    {{ tech }}
+                  </span>
+                }
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex-grow">
+              <div class="flex flex-wrap gap-2">
+                @for (tag of project.tags; track tag) {
+                  <span class="px-3 py-1 bg-slate-400/20 text-slate-300 rounded-xl text-sm font-medium border border-slate-400/30">
+                    {{ tag }}
+                  </span>
+                }
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-col sm:flex-row gap-3 pt-4">
+              @if (project.liveUrl) {
+                <a [href]="project.liveUrl" target="_blank" 
+                   class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  Voir le projet
+                </a>
+              }
+              @if (project.githubUrl) {
+                <a [href]="project.githubUrl" target="_blank" 
+                   class="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 text-white rounded-xl font-semibold border border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  Code source
+                </a>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `,
+  styleUrls: ['./project-modal.css']
+})
+export class ProjectModalComponent implements OnInit, OnDestroy {
+  @Input() project!: Project;
+  @Output() closeModal = new EventEmitter<void>();
+
+  ngOnInit() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  ngOnDestroy() {
+    document.body.style.overflow = 'auto';
+  }
+
+  @HostListener('keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      this.close();
+    }
+  }
+
+  onBackdropClick(event: Event) {
+    if (event.target === event.currentTarget) {
+      this.close();
+    }
+  }
+
+  close() {
+    this.closeModal.emit();
+  }
+}

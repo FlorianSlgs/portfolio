@@ -1,19 +1,38 @@
 <header class="header" [class.transparent]="!isScrolled" [class.scrolled]="isScrolled">
-    <div class="p-4 flex justify-end items-center">
-        <!-- Navigation à gauche -->
-        <nav class="flex space-x-20 px-20">
-            <app-button-anchor (clicked)="handleHomeClick()">FEUX</app-button-anchor>
-            <app-button-anchor (clicked)="handleAboutClick()">INONDATIONS</app-button-anchor>
-            <app-button-anchor (clicked)="handleServicesClick()">SERVICES</app-button-anchor>
-        </nav>
+    <div class="p-4 flex justify-between items-center px-30">
+        <!-- Logo à gauche -->
+        <div class="logo">
+            <img src="logo-florian-salengros.svg" alt="Florian Salengros" class="h-14 w-auto cursor-pointer" (click)="handleLogoClick()">
+        </div>
         
-        <!-- Bouton Contact à droite -->
-        <app-button 
-            class="poppins-light"
-            variant="primary"
-            size="md"
-            (clicked)="handleButtonClick()">
-            CONTACT
-        </app-button>
+        <div class="flex items-center space-x-20">
+            <!-- Navigation au centre -->
+            <nav class="flex space-x-20 px-20">
+                <app-button-anchor 
+                    [class.active]="isLinkActive('accueil')" 
+                    (clicked)="handleHomeClick()">
+                    ACCUEIL
+                </app-button-anchor>
+                <app-button-anchor 
+                    [class.active]="isLinkActive('projets')" 
+                    (clicked)="handleProjectsClick()">
+                    PROJETS
+                </app-button-anchor>
+                <app-button-anchor 
+                    [class.active]="isLinkActive('services')" 
+                    (clicked)="handleServicesClick()">
+                    SERVICES
+                </app-button-anchor>
+            </nav>
+            
+            <!-- Bouton Contact à droite -->
+            <app-button 
+                class="poppins-light"
+                variant="primary"
+                size="md"
+                (clicked)="handleButtonClick()">
+                CONTACT
+            </app-button>
+        </div>
     </div>
 </header>
