@@ -47,30 +47,23 @@
         </div>
         
         <!-- Bouton hamburger (visible uniquement sur mobile) -->
-        <button class="md:hidden flex flex-col justify-center items-center w-8 h-8 relative z-50"
+        <button class="hamburger md:hidden flex flex-col justify-center items-center w-8 h-8 relative z-50"
                 (click)="toggleMenu()"
                 [class.active]="isMenuOpen">
-            <span class="hamburger-line block w-6 h-0.5 bg-white transition-all duration-300 ease-in-out"
-                  [class.rotate-45]="isMenuOpen"
-                  [class.translate-y-1.5]="isMenuOpen"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-white mt-1 transition-all duration-300 ease-in-out"
-                  [class.opacity-0]="isMenuOpen"></span>
-            <span class="hamburger-line block w-6 h-0.5 bg-white mt-1 transition-all duration-300 ease-in-out"
-                  [class.-rotate-45]="isMenuOpen"
-                  [class.-translate-y-1.5]="isMenuOpen"></span>
+            <span class="hamburger-line block w-6 h-0.5 bg-white"></span>
+            <span class="hamburger-line block w-6 h-0.5 bg-white mt-1.5"></span>
+            <span class="hamburger-line block w-6 h-0.5 bg-white mt-1.5"></span>
         </button>
     </div>
     
-    <!-- Menu mobile (overlay) -->
-    <div class="md:hidden fixed inset-0 bg-black/95 backdrop-blur-lg transition-all duration-300 ease-in-out z-40"
-         [class.opacity-100]="isMenuOpen"
-         [class.opacity-0]="!isMenuOpen"
-         [class.pointer-events-none]="!isMenuOpen"
-         [class.pointer-events-auto]="isMenuOpen">
+    <!-- Menu mobile qui apparaît en dessous du header -->
+    <div class="mobile-menu md:hidden absolute left-0 right-0 top-full bg-black/95 backdrop-blur-lg z-40 border-t border-white/20"
+         [class.open]="isMenuOpen"
+         [style.pointer-events]="isMenuOpen ? 'auto' : 'none'">
         
-        <div class="flex flex-col justify-center items-center h-full space-y-8 text-center">
+        <div class="flex flex-col items-center py-8 space-y-6">
             <!-- Navigation mobile -->
-            <nav class="flex flex-col space-y-6">
+            <nav class="flex flex-col items-center space-y-6">
                 <app-button-anchor 
                     class="nav-link-mobile text-xl font-light transition-all duration-300 hover:text-gray-300"
                     [class.active]="isLinkActive('accueil')" 
@@ -92,14 +85,13 @@
             </nav>
             
             <!-- Bouton Contact mobile -->
-            <div class="mt-8">
-                <app-button 
-                    class="poppins-light"
-                    variant="primary"
-                    size="lg"
+            <div class="mt-4">
+                <app-button-anchor 
+                    class="nav-link-mobile text-xl font-light transition-all duration-300 hover:text-gray-300"
+                    [class.active]="isLinkActive('contact')" 
                     (clicked)="handleButtonClick()">
                     CONTACT
-                </app-button>
+                </app-button-anchor>
             </div>
         </div>
     </div>

@@ -55,19 +55,34 @@
 /* Animation du menu hamburger */
 .hamburger-line {
   transform-origin: center;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Styles pour l'animation du hamburger quand actif */
-button.active .hamburger-line:first-child {
-  transform: rotate(45deg) translateY(6px);
+.hamburger.active .hamburger-line:first-child {
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
-button.active .hamburger-line:nth-child(2) {
+.hamburger.active .hamburger-line:nth-child(2) {
   opacity: 0;
 }
 
-button.active .hamburger-line:last-child {
-  transform: rotate(-45deg) translateY(-6px);
+.hamburger.active .hamburger-line:last-child {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Animation pour le menu mobile */
+.mobile-menu {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Ajustements responsive supplémentaires */
@@ -80,9 +95,4 @@ button.active .hamburger-line:last-child {
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
-}
-
-/* Éviter le scroll du body quand le menu mobile est ouvert */
-body.menu-open {
-  overflow: hidden;
 }

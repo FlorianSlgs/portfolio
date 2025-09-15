@@ -29,7 +29,7 @@ export class ButtonComponent {
     // Classes de taille
     const sizeClasses = {
       sm: 'px-4 py-2 text-sm',
-      md: 'px-6 py-3 text-base',
+      md: 'sm:px-6 px-4 sm:py-3 py-2 sm:text-base text-sm',
       lg: 'px-8 py-4 text-lg'
     };
     
