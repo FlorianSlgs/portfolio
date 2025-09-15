@@ -2,15 +2,17 @@ import { Component, HostListener, OnInit, OnDestroy, AfterViewInit } from '@angu
 import { ButtonComponent } from '../../shared/button/button';
 import { ButtonAnchorComponent } from '../../shared/button-anchor/button-anchor';
 import { Subject } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  imports: [ButtonComponent, ButtonAnchorComponent],
+  imports: [ButtonComponent, ButtonAnchorComponent, CommonModule],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
 export class Header implements OnInit, OnDestroy, AfterViewInit {
   isScrolled = false;
+  isMenuOpen = false; // Nouvel état pour le menu mobile
   private scrollThreshold = 50;
   private destroy$ = new Subject<void>();
   
@@ -24,6 +26,14 @@ export class Header implements OnInit, OnDestroy, AfterViewInit {
     
     this.isScrolled = window.pageYOffset > this.scrollThreshold;
     this.updateActiveSection();
+  }
+
+  @HostListener('window:resize', [])
+  onWindowResize() {
+    // Ferme le menu mobile si on passe en desktop
+    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+      this.isMenuOpen = false;
+    }
   }
 
   ngOnInit() {
@@ -40,6 +50,16 @@ export class Header implements OnInit, OnDestroy, AfterViewInit {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  // Nouvelle méthode pour toggle le menu mobile
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  // Ferme le menu mobile après un clic sur un lien
+  private closeMenuAfterClick() {
+    this.isMenuOpen = false;
   }
 
   private observeSections() {
@@ -107,22 +127,27 @@ export class Header implements OnInit, OnDestroy, AfterViewInit {
 
   handleLogoClick() {
     this.scrollToSection('accueil');
+    this.closeMenuAfterClick();
   }
 
   handleButtonClick() {
     this.scrollToSection('contact');
+    this.closeMenuAfterClick();
   }
 
   handleHomeClick() {
     this.scrollToSection('accueil');
+    this.closeMenuAfterClick();
   }
 
   handleProjectsClick() {
     this.scrollToSection('projets');
+    this.closeMenuAfterClick();
   }
 
   handleServicesClick() {
     this.scrollToSection('services');
+    this.closeMenuAfterClick();
   }
 
   // Méthode pour vérifier si un lien est actif

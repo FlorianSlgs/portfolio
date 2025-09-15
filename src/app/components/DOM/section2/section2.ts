@@ -65,6 +65,18 @@ export class Section2 {
       technologies: ['Vue.js', 'Python', 'Django', 'PostgreSQL'],
       liveUrl: 'https://project-manager.com',
       githubUrl: 'https://github.com/project-manager'
+    },
+    {
+      id: 4,
+      title: 'Project Management',
+      subtitle: 'Task Organization',
+      category: 'Website Design',
+      tags: ['Web Design', 'App Design'],
+      image: '/api/placeholder/400/300',
+      description: 'Plateforme de gestion de projets avec interface sombre moderne, permettant une organisation efficace des tâches et une collaboration en équipe.',
+      technologies: ['Vue.js', 'Python', 'Django', 'PostgreSQL'],
+      liveUrl: 'https://project-manager.com',
+      githubUrl: 'https://github.com/project-manager'
     }
   ]);
 
