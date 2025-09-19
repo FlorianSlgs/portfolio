@@ -32,51 +32,39 @@ export class Section2 {
   projects = signal<Project[]>([
     {
       id: 1,
-      title: 'Digital Graphic Apps',
-      subtitle: 'Under One, Umbrella',
-      category: 'Website Design',
-      tags: ['Web Design', 'App Design'],
-      image: '/api/placeholder/400/300',
-      description: 'Une application complète de design graphique qui unifie plusieurs outils sous une seule interface utilisateur moderne et intuitive.',
-      technologies: ['Angular', 'TypeScript', 'CSS3', 'Figma'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com/example'
+      title: 'Tableau de bord communication',
+      subtitle: 'Angular, Express(Node.js), PostGreSQL',
+      category: "Création d'application web",
+      tags: ['Frontend', 'Backend', 'Base de données'],
+      image: 'plan_com.png',
+      description: 'Projet formation Ilaria : Application de tableau de bord conçue pour les équipes de communication, offrant une gestion fluide et interactive de leurs plans de communication.',
+      technologies: ['Angular', 'Express(node.js)', 'PostGreSQL', 'GSAP', 'Tailwind', 'TypeScript', 'CSS3', 'HTML5'],
+      liveUrl: 'https://plancom.duckdns.org',
+      githubUrl: 'https://github.com/FlorianSlgs/plan-com#'
     },
     {
       id: 2,
-      title: "Today's Cryptocurrency",
-      subtitle: 'Price Dashboard',
-      category: 'Website Design',
-      tags: ['Web Design', 'App Design'],
-      image: '/api/placeholder/400/300',
-      description: 'Dashboard moderne pour suivre les prix des cryptomonnaies en temps réel avec des graphiques interactifs et des alertes personnalisées.',
-      technologies: ['React', 'Node.js', 'WebSocket', 'Chart.js'],
-      liveUrl: 'https://crypto-dashboard.com',
-      githubUrl: 'https://github.com/crypto-dashboard'
+      title: "Quiz multijoueur en temps réel",
+      subtitle: "Projet université : Next.js, React, Express(Node.js), WebSocket, MongoDB",
+      category: "Création d'application web",
+      tags: ['SEO', 'Frontend', 'Backend', 'Base de données'],
+      image: 'quiz.png',
+      description: '#1 Google sur "quiz mutlijoueur" : jeu de quiz en ligne où plusieurs joueurs peuvent s’affronter en direct avec un classement instantané.',
+      technologies: ['React', 'Next.js', 'Express(Node.js)', 'WebSocket', 'MongoDB', 'TypeScript', 'CSS3', 'HTML5'],
+      liveUrl: 'https://quiz-multijoueur.fr/',
+      githubUrl: 'https://github.com/FlorianSlgs/Jeux_site'
     },
     {
       id: 3,
-      title: 'Project Management',
-      subtitle: 'Task Organization',
-      category: 'Website Design',
-      tags: ['Web Design', 'App Design'],
-      image: '/api/placeholder/400/300',
-      description: 'Plateforme de gestion de projets avec interface sombre moderne, permettant une organisation efficace des tâches et une collaboration en équipe.',
-      technologies: ['Vue.js', 'Python', 'Django', 'PostgreSQL'],
-      liveUrl: 'https://project-manager.com',
-      githubUrl: 'https://github.com/project-manager'
-    },
-    {
-      id: 4,
-      title: 'Project Management',
-      subtitle: 'Task Organization',
-      category: 'Website Design',
-      tags: ['Web Design', 'App Design'],
-      image: '/api/placeholder/400/300',
-      description: 'Plateforme de gestion de projets avec interface sombre moderne, permettant une organisation efficace des tâches et une collaboration en équipe.',
-      technologies: ['Vue.js', 'Python', 'Django', 'PostgreSQL'],
-      liveUrl: 'https://project-manager.com',
-      githubUrl: 'https://github.com/project-manager'
+      title: 'Application de sensibilisation aux risques',
+      subtitle: 'Projet DDTM 34 : Angular, Tailwind, Typescript, CSS3, HTML5',
+      category: "Création d'application web",
+      tags: ['Frontend', 'Design'],
+      image: 'risques.png',
+      description: 'Application de sensibilisation du grand public aux risques naturels.',
+      technologies: ['Angular', 'Tailwind', 'Typescript', 'CSS3', 'HTML5'],
+      liveUrl: 'https://presentation-risques-xluf.onrender.com/home',
+      githubUrl: 'https://github.com/FlorianSlgs/presentation-risques'
     }
   ]);
 
