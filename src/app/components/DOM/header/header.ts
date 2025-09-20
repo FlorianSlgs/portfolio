@@ -145,8 +145,18 @@ export class Header implements OnInit, OnDestroy, AfterViewInit {
     this.closeMenuAfterClick();
   }
 
-  handleServicesClick() {
-    this.scrollToSection('services');
+  handleCompetencesClick() {
+    this.scrollToSection('competences');
+    this.closeMenuAfterClick();
+  }
+
+    handleParcoursClick() {
+    this.scrollToSection('parcours');
+    this.closeMenuAfterClick();
+  }
+
+  handleMethodesClick() {
+    this.scrollToSection('methodes');
     this.closeMenuAfterClick();
   }
 

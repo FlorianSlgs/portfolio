@@ -30,9 +30,21 @@
                 </app-button-anchor>
                 <app-button-anchor 
                     class="nav-link transition-all duration-300 hover:text-gray-300"
-                    [class.active]="isLinkActive('services')" 
-                    (clicked)="handleServicesClick()">
-                    SERVICES
+                    [class.active]="isLinkActive('competences')" 
+                    (clicked)="handleCompetencesClick()">
+                    COMPETENCES
+                </app-button-anchor>
+                <app-button-anchor 
+                    class="nav-link transition-all duration-300 hover:text-gray-300"
+                    [class.active]="isLinkActive('parcours')" 
+                    (clicked)="handleParcoursClick()">
+                    PARCOURS
+                </app-button-anchor>
+                <app-button-anchor 
+                    class="nav-link transition-all duration-300 hover:text-gray-300"
+                    [class.active]="isLinkActive('methodes')" 
+                    (clicked)="handleMethodesClick()">
+                    METHODES
                 </app-button-anchor>
             </nav>
             
@@ -78,9 +90,21 @@
                 </app-button-anchor>
                 <app-button-anchor 
                     class="nav-link-mobile text-xl font-light transition-all duration-300 hover:text-gray-300"
-                    [class.active]="isLinkActive('services')" 
-                    (clicked)="handleServicesClick()">
-                    SERVICES
+                    [class.active]="isLinkActive('competences')" 
+                    (clicked)="handleCompetencesClick()">
+                    COMPETENCE
+                </app-button-anchor>
+                <app-button-anchor 
+                    class="nav-link-mobile text-xl font-light transition-all duration-300 hover:text-gray-300"
+                    [class.active]="isLinkActive('parcours')" 
+                    (clicked)="handleParcoursClick()">
+                    PARCOURS
+                </app-button-anchor>
+                <app-button-anchor 
+                    class="nav-link-mobile text-xl font-light transition-all duration-300 hover:text-gray-300"
+                    [class.active]="isLinkActive('methodes')" 
+                    (clicked)="handleMethodesClick()">
+                    METHODES
                 </app-button-anchor>
             </nav>
             
