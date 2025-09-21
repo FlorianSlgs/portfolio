@@ -53,7 +53,7 @@
                 class="poppins-light ml-4"
                 variant="primary"
                 size="md"
-                (clicked)="handleButtonClick()">
+                (clicked)="handleContactClick()">
                 CONTACT
             </app-button>
         </div>
@@ -106,17 +106,14 @@
                     (clicked)="handleMethodesClick()">
                     METHODES
                 </app-button-anchor>
-            </nav>
-            
-            <!-- Bouton Contact mobile -->
-            <div class="mt-4">
                 <app-button-anchor 
                     class="nav-link-mobile text-xl font-light transition-all duration-300 hover:text-gray-300"
                     [class.active]="isLinkActive('contact')" 
-                    (clicked)="handleButtonClick()">
+                    (clicked)="handleContactClick()">
                     CONTACT
                 </app-button-anchor>
-            </div>
+            </nav>
+
         </div>
     </div>
 </header>

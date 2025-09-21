@@ -16,9 +16,15 @@ export class Section1 implements AfterViewInit {
   
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  handleButtonClick() {
-    console.log('Bouton Contact cliqué !');
-  }
+    handleContactClick() {
+      // Scroll directement vers le bas de la page
+      if (typeof window !== 'undefined') {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+      }
+    }
 
   logos = [
     {
@@ -51,7 +57,7 @@ export class Section1 implements AfterViewInit {
         const Typed = TypedModule.default;
         
         const options = {
-          strings: ['Angular', 'TypeScript', 'SCSS', 'Animations', 'Open Source'],
+          strings: ['Angular', 'Express(Node.js)', 'PostGreSQL', 'Typescript', 'Tailwindcss'],
           typeSpeed: 80,
           backSpeed: 40,
           backDelay: 1000,

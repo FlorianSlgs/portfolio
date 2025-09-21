@@ -130,8 +130,15 @@ export class Header implements OnInit, OnDestroy, AfterViewInit {
     this.closeMenuAfterClick();
   }
 
-  handleButtonClick() {
-    this.scrollToSection('contact');
+  handleContactClick() {
+    // Scroll directement vers le bas de la page
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+      this.activeSection = 'contact';
+    }
     this.closeMenuAfterClick();
   }
 
