@@ -33,11 +33,11 @@ export class Section2 {
     {
       id: 1,
       title: 'Tableau de bord communication',
-      subtitle: 'Angular, Express(Node.js), PostGreSQL',
+      subtitle: 'Projet formation Ilaria : Angular, Express(Node.js), PostGreSQL',
       category: "Création d'application web",
       tags: ['Frontend', 'Backend', 'Base de données'],
       image: 'plan_com.webp',
-      description: 'Projet formation Ilaria : Application de tableau de bord conçue pour les équipes de communication, offrant une gestion fluide et interactive de leurs plans de communication.',
+      description: 'Application de tableau de bord conçue pour les équipes de communication, offrant une gestion fluide et interactive de leurs plans de communication.',
       technologies: ['Angular', 'Express(node.js)', 'PostGreSQL', 'GSAP', 'Tailwind', 'TypeScript', 'CSS3', 'HTML5'],
       liveUrl: 'https://plancom.duckdns.org',
       githubUrl: 'https://github.com/FlorianSlgs/plan-com#'
@@ -49,7 +49,7 @@ export class Section2 {
       category: "Création d'application web",
       tags: ['SEO', 'Frontend', 'Backend', 'Base de données'],
       image: 'quiz.webp',
-      description: '#1 Google sur "quiz mutlijoueur" : jeu de quiz en ligne où plusieurs joueurs peuvent s’affronter en direct avec un classement instantané.',
+      description: '#1 Google sur "quiz multijoueur" : jeu de quiz en ligne où plusieurs joueurs peuvent s’affronter en direct avec un classement instantané.',
       technologies: ['React', 'Next.js', 'Express(Node.js)', 'WebSocket', 'MongoDB', 'TypeScript', 'CSS3', 'HTML5'],
       liveUrl: 'https://quiz-multijoueur.fr/',
       githubUrl: 'https://github.com/FlorianSlgs/Jeux_site'
