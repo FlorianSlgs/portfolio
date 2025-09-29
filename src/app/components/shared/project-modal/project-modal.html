@@ -12,11 +12,11 @@
         </button>
 
         <!-- Modal Content -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
           <!-- Image Section -->
-          <div class="relative overflow-hidden rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none">
+          <div class="relative overflow-hidden rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none min-h-[300px] lg:min-h-[500px] bg-slate-900/50 flex items-center justify-center">
             <img [src]="project.image" [alt]="project.title" 
-                 class="w-full h-full object-cover">
+                class="w-full h-full object-contain">
           </div>
 
           <!-- Info Section -->

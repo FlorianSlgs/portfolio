@@ -45,7 +45,7 @@ export class Section2 {
     {
       id: 2,
       title: "Quiz multijoueur en temps réel",
-      subtitle: "Projet université : Next.js, React, Express(Node.js), WebSocket, MongoDB",
+      subtitle: "Projet universitaire : Next.js, React, Express(Node.js), WebSocket, MongoDB",
       category: "Création d'application web",
       tags: ['SEO', 'Frontend', 'Backend', 'Base de données'],
       image: 'quiz.webp',
@@ -65,6 +65,26 @@ export class Section2 {
       technologies: ['Angular', 'Tailwind', 'Typescript', 'CSS3', 'HTML5'],
       liveUrl: 'https://presentation-risques-xluf.onrender.com/home',
       githubUrl: 'https://github.com/FlorianSlgs/presentation-risques'
+    },
+     {
+     id: 4,
+      title: 'Site de présentation de données territoriales',
+      subtitle: 'Projet DDTM 34 : JavaScript, Bootstrap, CSS, HTML, R Shiny',
+      category: "Création d'application web",
+      tags: ['Frontend', 'Data Visualization'],
+      image: 'App_ODD.webp',
+      description: "Application développée en collaboration avec les développeurs backend R de la DDTM, permettant de visualiser les données territoriales sous forme de graphiques et de cartes interactives.",
+      technologies: ['JavaScript', 'Bootstrap', 'CSS', 'HTML', 'R', 'R Shiny']
+    },
+     {
+      id: 5,
+      title: 'Application de commande de nourriture en vrac.',
+      subtitle: 'Projet universitaire : PHP, JavaScript, CSS, HTML, MySQL',
+      category: "Création d'application web",
+      tags: ['Frontend', 'Backend', 'Base de données'],
+      image: 'Durablans.webp',
+      description: 'Site de commande de nourriture en vrac. Gestion de base de données et interactions en JavaScript.',
+      technologies: ['PHP', 'JavaScript', 'CSS', 'HTML', 'MySQL']
     }
   ]);
 
