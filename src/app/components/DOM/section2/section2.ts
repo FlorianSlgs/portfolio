@@ -78,7 +78,7 @@ export class Section2 {
     },
      {
       id: 5,
-      title: 'Application de commande de nourriture en vrac.',
+      title: 'Application de commande de nourriture en vrac',
       subtitle: 'Projet universitaire : PHP, JavaScript, CSS, HTML, MySQL',
       category: "Création d'application web",
       tags: ['Frontend', 'Backend', 'Base de données'],
