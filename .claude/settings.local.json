@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/Documents/Divers/informatique/angular/loop-eat/frontend/src/app/connection/pages/user/email-step/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
