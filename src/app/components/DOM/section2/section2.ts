@@ -32,6 +32,18 @@ export class Section2 {
   projects = signal<Project[]>([
     {
       id: 1,
+      title: 'Gestion de boites réutilisables',
+      subtitle: 'Projet stage TEM3 : Angular, Express(Node.js), PostGreSQL',
+      category: "Création d'application web",
+      tags: ['Frontend', 'Backend', 'Base de données'],
+      image: 'loopeat.webp',
+      description: "Développement d'une application de gestion de consigne avec Angular et Express/PostgreSQL avec Jest pour garantir la qualité du code. Conception des maquettes UX/UI sous Illustrator.",
+      technologies: ['Angular', 'Express(node.js)', 'PostGreSQL', 'Docker', 'TailwindCSS', 'TypeScript', 'Jest', 'Websocket / Webhook'],
+      liveUrl: 'https://loopeat.duckdns.org',
+      githubUrl: 'https://github.com/FlorianSlgs/loopeat'
+    },
+    {
+      id: 2,
       title: 'Tableau de bord communication',
       subtitle: 'Projet formation Ilaria : Angular, Express(Node.js), PostGreSQL',
       category: "Création d'application web",
@@ -43,7 +55,7 @@ export class Section2 {
       githubUrl: 'https://github.com/FlorianSlgs/plan-com#'
     },
     {
-      id: 2,
+      id: 3,
       title: "Quiz multijoueur en temps réel",
       subtitle: "Projet universitaire : Next.js, React, Express(Node.js), WebSocket, MongoDB",
       category: "Création d'application web",
@@ -55,7 +67,7 @@ export class Section2 {
       githubUrl: 'https://github.com/FlorianSlgs/Jeux_site'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Application de sensibilisation aux risques',
       subtitle: 'Projet DDTM 34 : Angular, Tailwind, Typescript, CSS3, HTML5',
       category: "Création d'application web",
@@ -67,7 +79,7 @@ export class Section2 {
       githubUrl: 'https://github.com/FlorianSlgs/presentation-risques'
     },
      {
-     id: 4,
+     id: 5,
       title: 'Site de présentation de données territoriales',
       subtitle: 'Projet DDTM 34 : JavaScript, Bootstrap, CSS, HTML, R Shiny',
       category: "Création d'application web",
@@ -77,7 +89,7 @@ export class Section2 {
       technologies: ['JavaScript', 'Bootstrap', 'CSS', 'HTML', 'R', 'R Shiny']
     },
      {
-      id: 5,
+      id: 6,
       title: 'Application de commande de nourriture en vrac',
       subtitle: 'Projet universitaire : PHP, JavaScript, CSS, HTML, MySQL',
       category: "Création d'application web",
