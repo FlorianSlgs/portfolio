@@ -39,7 +39,6 @@ export class Section2 {
       image: 'loopeat.webp',
       description: "Développement d'une application de gestion de consigne avec Angular et Express/PostgreSQL avec Jest pour garantir la qualité du code. Conception des maquettes UX/UI sous Illustrator.",
       technologies: ['Angular', 'Express(node.js)', 'PostGreSQL', 'Docker', 'TailwindCSS', 'TypeScript', 'Jest', 'Websocket / Webhook'],
-      liveUrl: 'https://loopeat.duckdns.org',
       githubUrl: 'https://github.com/FlorianSlgs/loopeat'
     },
     {
@@ -51,7 +50,6 @@ export class Section2 {
       image: 'plan_com.webp',
       description: 'Application de tableau de bord conçue pour les équipes de communication, offrant une gestion fluide et interactive de leurs plans de communication.',
       technologies: ['Angular', 'Express(node.js)', 'PostGreSQL', 'GSAP', 'Tailwind', 'TypeScript', 'CSS3', 'HTML5'],
-      liveUrl: 'https://plancom.duckdns.org',
       githubUrl: 'https://github.com/FlorianSlgs/plan-com#'
     },
     {
