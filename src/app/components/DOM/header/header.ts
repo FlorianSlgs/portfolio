@@ -2,11 +2,11 @@ import { Component, HostListener, OnInit, OnDestroy, AfterViewInit } from '@angu
 import { ButtonComponent } from '../../shared/button/button';
 import { ButtonAnchorComponent } from '../../shared/button-anchor/button-anchor';
 import { Subject } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-header',
-  imports: [ButtonComponent, ButtonAnchorComponent, CommonModule],
+  imports: [ButtonComponent, ButtonAnchorComponent],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })

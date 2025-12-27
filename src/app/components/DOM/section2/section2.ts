@@ -1,5 +1,5 @@
 import { Component, signal, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ProjectModalComponent } from '../../shared/project-modal/project-modal';
 
 export interface Project {
@@ -18,7 +18,7 @@ export interface Project {
 @Component({
   selector: 'app-section2',
   standalone: true,
-  imports: [CommonModule, ProjectModalComponent],
+  imports: [ProjectModalComponent],
   templateUrl: './section2.html',
   styleUrl: './section2.css'
 })

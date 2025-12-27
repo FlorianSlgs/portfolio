@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter, HostListener, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Project } from '../../DOM/section2/section2';
 
 @Component({
   selector: 'app-project-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './project-modal.html',
   styleUrls: ['./project-modal.css']
 })
